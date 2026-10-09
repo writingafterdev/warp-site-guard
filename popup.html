@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>WARP Site Guard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="popup-page">
+  <main class="card popup-card">
+    <div class="eyebrow">WARP SITE GUARD</div>
+    <h1>Your website rules</h1>
+    <p class="intro">These websites open automatically once Cloudflare WARP matches your choice.</p>
+    <div id="warp-status" class="status checking" role="status">Checking WARP…</div>
+    <ul id="sites" class="site-list"></ul>
+    <form id="add-form">
+      <label for="domain">Add a website</label>
+      <input id="domain" name="domain" type="text" placeholder="example.com" autocomplete="off" required>
+      <label for="required">WARP should be</label>
+      <select id="required" name="required"><option value="off">Off</option><option value="on">On</option></select>
+      <button type="submit" class="primary full">Add website</button>
+    </form>
+    <p id="message" class="form-message" role="status"></p>
+    <p class="fineprint">Auto-switch needs the optional Mac helper. It changes WARP for your whole Mac. A website may use other domains, and an already open tab can keep loading.</p>
+  </main>
+  <script src="popup.js"></script>
+</body>
+</html>

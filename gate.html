@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Connecting · WARP Site Guard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="gate-page">
+  <main class="card gate-card">
+    <div class="eyebrow">WARP SITE GUARD</div>
+    <h1>Preparing your connection</h1>
+    <p class="intro">Your website will open automatically when WARP matches your rule.</p>
+    <div class="site-box"><span>Website</span><strong id="domain">Checking…</strong></div>
+    <div class="site-box"><span>Required WARP state</span><strong id="required">Checking…</strong></div>
+    <div id="status" class="status checking" role="status">Checking Cloudflare WARP…</div>
+    <p id="explanation" class="explanation"></p>
+    <div class="actions">
+      <button id="retry" type="button" hidden>Check again</button>
+    </div>
+    <p class="fineprint">Only Cloudflare WARP is checked. This cannot detect every VPN or guarantee how a website treats your account.</p>
+  </main>
+  <script src="gate.js"></script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+{
+  "manifest_version": 3,
+  "name": "WARP Site Guard",
+  "version": "1.1.0",
+  "description": "Check Cloudflare WARP before opening websites you choose.",
+  "minimum_chrome_version": "120",
+  "permissions": ["alarms", "declarativeNetRequest", "storage", "webNavigation", "nativeMessaging"],
+  "host_permissions": ["<all_urls>"],
+  "background": {"service_worker": "background.js"},
+  "action": {"default_title": "WARP Site Guard", "default_popup": "popup.html"},
+  "web_accessible_resources": [{
+    "resources": ["gate.html", "gate.js", "style.css"],
+    "matches": ["<all_urls>"]
+  }]
+}
